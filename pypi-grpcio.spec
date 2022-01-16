@@ -4,7 +4,7 @@
 #
 Name     : pypi-grpcio
 Version  : 1.43.0
-Release  : 81
+Release  : 82
 URL      : https://files.pythonhosted.org/packages/c6/6b/5f7cd38ff3ac80f47cbe56618fe45502f90b41a56f5d9e248ee574e14687/grpcio-1.43.0.tar.gz
 Source0  : https://files.pythonhosted.org/packages/c6/6b/5f7cd38ff3ac80f47cbe56618fe45502f90b41a56f5d9e248ee574e14687/grpcio-1.43.0.tar.gz
 Summary  : HTTP/2-based RPC framework
@@ -13,16 +13,13 @@ License  : Apache-2.0
 Requires: pypi-grpcio-license = %{version}-%{release}
 Requires: pypi-grpcio-python = %{version}-%{release}
 Requires: pypi-grpcio-python3 = %{version}-%{release}
-BuildRequires : Cython
 BuildRequires : buildreq-distutils3
-Provides: grpcio
-Provides: grpcio-python
-Provides: grpcio-python3
 BuildRequires : pypi(coverage)
 BuildRequires : pypi(cython)
 BuildRequires : pypi(protobuf)
 BuildRequires : pypi(six)
 BuildRequires : pypi(wheel)
+BuildRequires : pypi-cython
 BuildRequires : python3-dev
 
 %description
@@ -54,11 +51,7 @@ Summary: python3 components for the pypi-grpcio package.
 Group: Default
 Requires: python3-core
 Provides: pypi(grpcio)
-Requires: pypi(coverage)
-Requires: pypi(cython)
-Requires: pypi(protobuf)
 Requires: pypi(six)
-Requires: pypi(wheel)
 
 %description python3
 python3 components for the pypi-grpcio package.
@@ -73,7 +66,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1641440746
+export SOURCE_DATE_EPOCH=1642361206
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto -fstack-protector-strong -fzero-call-used-regs=used "
 export FCFLAGS="$FFLAGS -fno-lto -fstack-protector-strong -fzero-call-used-regs=used "
