@@ -5,14 +5,12 @@
 #
 Name     : pypi-grpcio
 Version  : 1.54.0
-Release  : 112
+Release  : 113
 URL      : https://files.pythonhosted.org/packages/ef/e4/5c717f3c6c65b7c5ff2542ca25d6c2ce0f99d9ee9119620c6e2325a6da79/grpcio-1.54.0.tar.gz
 Source0  : https://files.pythonhosted.org/packages/ef/e4/5c717f3c6c65b7c5ff2542ca25d6c2ce0f99d9ee9119620c6e2325a6da79/grpcio-1.54.0.tar.gz
 Summary  : HTTP/2-based RPC framework
 Group    : Development/Tools
 License  : Apache-2.0
-Requires: pypi-grpcio-filemap = %{version}-%{release}
-Requires: pypi-grpcio-lib = %{version}-%{release}
 Requires: pypi-grpcio-license = %{version}-%{release}
 Requires: pypi-grpcio-python = %{version}-%{release}
 Requires: pypi-grpcio-python3 = %{version}-%{release}
@@ -30,24 +28,6 @@ BuildRequires : python3-dev
         |compat_check_pypi|
         
         Package for gRPC Python.
-
-%package filemap
-Summary: filemap components for the pypi-grpcio package.
-Group: Default
-
-%description filemap
-filemap components for the pypi-grpcio package.
-
-
-%package lib
-Summary: lib components for the pypi-grpcio package.
-Group: Libraries
-Requires: pypi-grpcio-license = %{version}-%{release}
-Requires: pypi-grpcio-filemap = %{version}-%{release}
-
-%description lib
-lib components for the pypi-grpcio package.
-
 
 %package license
 Summary: license components for the pypi-grpcio package.
@@ -69,7 +49,6 @@ python components for the pypi-grpcio package.
 %package python3
 Summary: python3 components for the pypi-grpcio package.
 Group: Default
-Requires: pypi-grpcio-filemap = %{version}-%{release}
 Requires: python3-core
 Provides: pypi(grpcio)
 Requires: pypi(coverage)
@@ -93,7 +72,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1681831787
+export SOURCE_DATE_EPOCH=1683038178
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$FFLAGS -fno-lto "
@@ -133,14 +112,6 @@ popd
 %files
 %defattr(-,root,root,-)
 
-%files filemap
-%defattr(-,root,root,-)
-/usr/share/clear/filemap/filemap-pypi-grpcio
-
-%files lib
-%defattr(-,root,root,-)
-/usr/share/clear/optimized-elf/other*
-
 %files license
 %defattr(0644,root,root,0755)
 /usr/share/package-licenses/pypi-grpcio/242ec6abfdd8c114f2e803b84934469c299348fc
@@ -150,4 +121,5 @@ popd
 
 %files python3
 %defattr(-,root,root,-)
+/V3/usr/lib/python3*/*
 /usr/lib/python3*/*
