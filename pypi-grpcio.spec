@@ -4,10 +4,10 @@
 # Using build pattern: distutils3
 #
 Name     : pypi-grpcio
-Version  : 1.54.0
-Release  : 113
-URL      : https://files.pythonhosted.org/packages/ef/e4/5c717f3c6c65b7c5ff2542ca25d6c2ce0f99d9ee9119620c6e2325a6da79/grpcio-1.54.0.tar.gz
-Source0  : https://files.pythonhosted.org/packages/ef/e4/5c717f3c6c65b7c5ff2542ca25d6c2ce0f99d9ee9119620c6e2325a6da79/grpcio-1.54.0.tar.gz
+Version  : 1.54.2
+Release  : 114
+URL      : https://files.pythonhosted.org/packages/cb/82/f4a1535e6ae5360abd59ab4e8d90a884c680a3997a44c7418364030874dd/grpcio-1.54.2.tar.gz
+Source0  : https://files.pythonhosted.org/packages/cb/82/f4a1535e6ae5360abd59ab4e8d90a884c680a3997a44c7418364030874dd/grpcio-1.54.2.tar.gz
 Summary  : HTTP/2-based RPC framework
 Group    : Development/Tools
 License  : Apache-2.0
@@ -61,10 +61,10 @@ python3 components for the pypi-grpcio package.
 
 
 %prep
-%setup -q -n grpcio-1.54.0
-cd %{_builddir}/grpcio-1.54.0
+%setup -q -n grpcio-1.54.2
+cd %{_builddir}/grpcio-1.54.2
 pushd ..
-cp -a grpcio-1.54.0 buildavx2
+cp -a grpcio-1.54.2 buildavx2
 popd
 
 %build
@@ -72,7 +72,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1683038178
+export SOURCE_DATE_EPOCH=1684609343
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$FFLAGS -fno-lto "
