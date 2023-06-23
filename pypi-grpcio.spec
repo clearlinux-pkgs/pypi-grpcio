@@ -4,10 +4,10 @@
 # Using build pattern: distutils3
 #
 Name     : pypi-grpcio
-Version  : 1.55.0
-Release  : 116
-URL      : https://files.pythonhosted.org/packages/76/63/d025fb7599379765d6437e5aab3644955248ea89d2f84f4f8a9762d99c52/grpcio-1.55.0.tar.gz
-Source0  : https://files.pythonhosted.org/packages/76/63/d025fb7599379765d6437e5aab3644955248ea89d2f84f4f8a9762d99c52/grpcio-1.55.0.tar.gz
+Version  : 1.56.0
+Release  : 117
+URL      : https://files.pythonhosted.org/packages/ee/d6/62ea04e71abe92406baf8fbe25daee5e90d45571206b8e93c4812ea958b6/grpcio-1.56.0.tar.gz
+Source0  : https://files.pythonhosted.org/packages/ee/d6/62ea04e71abe92406baf8fbe25daee5e90d45571206b8e93c4812ea958b6/grpcio-1.56.0.tar.gz
 Summary  : HTTP/2-based RPC framework
 Group    : Development/Tools
 License  : Apache-2.0
@@ -15,10 +15,6 @@ Requires: pypi-grpcio-license = %{version}-%{release}
 Requires: pypi-grpcio-python = %{version}-%{release}
 Requires: pypi-grpcio-python3 = %{version}-%{release}
 BuildRequires : buildreq-distutils3
-BuildRequires : pypi(coverage)
-BuildRequires : pypi(cython)
-BuildRequires : pypi(protobuf)
-BuildRequires : pypi(wheel)
 BuildRequires : pypi-cython
 BuildRequires : python3-dev
 
@@ -51,20 +47,16 @@ Summary: python3 components for the pypi-grpcio package.
 Group: Default
 Requires: python3-core
 Provides: pypi(grpcio)
-Requires: pypi(coverage)
-Requires: pypi(cython)
-Requires: pypi(protobuf)
-Requires: pypi(wheel)
 
 %description python3
 python3 components for the pypi-grpcio package.
 
 
 %prep
-%setup -q -n grpcio-1.55.0
-cd %{_builddir}/grpcio-1.55.0
+%setup -q -n grpcio-1.56.0
+cd %{_builddir}/grpcio-1.56.0
 pushd ..
-cp -a grpcio-1.55.0 buildavx2
+cp -a grpcio-1.56.0 buildavx2
 popd
 
 %build
@@ -72,7 +64,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1685559150
+export SOURCE_DATE_EPOCH=1687533054
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$FFLAGS -fno-lto "
