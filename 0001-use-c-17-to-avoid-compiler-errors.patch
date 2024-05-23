@@ -1,0 +1,44 @@
+From 6fba9dc26fdc916acc474671c70526ea4a95aab7 Mon Sep 17 00:00:00 2001
+From: William Douglas <william.douglas@intel.com>
+Date: Thu, 23 May 2024 14:28:15 -0700
+Subject: [PATCH] use c++17 to avoid compiler errors
+
+Signed-off-by: William Douglas <william.douglas@intel.com>
+---
+ setup.py | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+diff --git a/setup.py b/setup.py
+index d25e924..b20987c 100644
+--- a/setup.py
++++ b/setup.py
+@@ -213,7 +213,7 @@ def check_linker_need_libatomic():
+     )
+     cxx = shlex.split(os.environ.get("CXX", "c++"))
+     cpp_test = subprocess.Popen(
+-        cxx + ["-x", "c++", "-std=c++14", "-"],
++        cxx + ["-x", "c++", "-std=c++17", "-"],
+         stdin=PIPE,
+         stdout=PIPE,
+         stderr=PIPE,
+@@ -224,7 +224,7 @@ def check_linker_need_libatomic():
+     # Double-check to see if -latomic actually can solve the problem.
+     # https://github.com/grpc/grpc/issues/22491
+     cpp_test = subprocess.Popen(
+-        cxx + ["-x", "c++", "-std=c++14", "-", "-latomic"],
++        cxx + ["-x", "c++", "-std=c++17", "-", "-latomic"],
+         stdin=PIPE,
+         stdout=PIPE,
+         stderr=PIPE,
+@@ -252,7 +252,7 @@ if EXTRA_ENV_COMPILE_ARGS is None:
+         EXTRA_ENV_COMPILE_ARGS += " /MT"
+     elif "linux" in sys.platform:
+         # GCC by defaults uses C17 so only C++14 needs to be specified.
+-        EXTRA_ENV_COMPILE_ARGS += " -std=c++14"
++        EXTRA_ENV_COMPILE_ARGS += " -std=c++17"
+         EXTRA_ENV_COMPILE_ARGS += (
+             " -fvisibility=hidden -fno-wrapv -fno-exceptions"
+         )
+-- 
+2.45.1
+

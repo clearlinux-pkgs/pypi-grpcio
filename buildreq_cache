@@ -1,0 +1,5 @@
+1.64.0
+c-ares-dev
+openssl-dev
+pkgconfig(protobuf)
+zlib-dev
