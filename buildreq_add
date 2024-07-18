@@ -3,3 +3,5 @@
 python3-dev
 pypi-cython
 re2-dev
+abseil-cpp-dev
+zlib-dev
