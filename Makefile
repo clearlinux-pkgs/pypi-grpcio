@@ -1,5 +1,5 @@
 PKG_NAME := pypi-grpcio
-URL = https://files.pythonhosted.org/packages/12/18/b5b5a871302d30667450f256557e1d4d07bdc273988c6932068dba60137d/grpcio-1.65.2.tar.gz
+URL = https://files.pythonhosted.org/packages/cf/e7/739849982ca7fa1bf5e52a472803618e4f1f2963e9a73b1ca2cb056f95c7/grpcio-1.65.4.tar.gz
 ARCHIVES = 
 
 include ../common/Makefile.common
