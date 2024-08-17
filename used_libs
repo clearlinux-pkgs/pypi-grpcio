@@ -16,6 +16,7 @@ libabsl_random_internal_randen.so.2401.0.0
 libabsl_random_internal_randen_hwaes_impl.so.2401.0.0
 libabsl_random_internal_randen_slow.so.2401.0.0
 libabsl_raw_hash_set.so.2401.0.0
+libabsl_raw_logging_internal.so.2401.0.0
 libabsl_spinlock_wait.so.2401.0.0
 libabsl_status.so.2401.0.0
 libabsl_statusor.so.2401.0.0

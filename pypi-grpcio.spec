@@ -6,10 +6,10 @@
 # autospec commit: f35655a
 #
 Name     : pypi-grpcio
-Version  : 1.65.4
-Release  : 134
-URL      : https://files.pythonhosted.org/packages/cf/e7/739849982ca7fa1bf5e52a472803618e4f1f2963e9a73b1ca2cb056f95c7/grpcio-1.65.4.tar.gz
-Source0  : https://files.pythonhosted.org/packages/cf/e7/739849982ca7fa1bf5e52a472803618e4f1f2963e9a73b1ca2cb056f95c7/grpcio-1.65.4.tar.gz
+Version  : 1.65.5
+Release  : 135
+URL      : https://files.pythonhosted.org/packages/6c/d8/1d8f1640649808db79b689d65b03556077d5504baad5ea64b167a5adedad/grpcio-1.65.5.tar.gz
+Source0  : https://files.pythonhosted.org/packages/6c/d8/1d8f1640649808db79b689d65b03556077d5504baad5ea64b167a5adedad/grpcio-1.65.5.tar.gz
 Summary  : HTTP/2-based RPC framework
 Group    : Development/Tools
 License  : Apache-2.0
@@ -61,8 +61,8 @@ python3 components for the pypi-grpcio package.
 
 
 %prep
-%setup -q -n grpcio-1.65.4
-cd %{_builddir}/grpcio-1.65.4
+%setup -q -n grpcio-1.65.5
+cd %{_builddir}/grpcio-1.65.5
 %patch -P 1 -p1
 
 %build
@@ -81,7 +81,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1722632097
+export SOURCE_DATE_EPOCH=1723871016
 export GCC_IGNORE_WERROR=1
 CLEAR_INTERMEDIATE_CFLAGS="$CLEAR_INTERMEDIATE_CFLAGS -fno-lto "
 CLEAR_INTERMEDIATE_FCFLAGS="$CLEAR_INTERMEDIATE_FFLAGS -fno-lto "
