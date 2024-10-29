@@ -7,7 +7,7 @@
 #
 Name     : pypi-grpcio
 Version  : 1.67.1
-Release  : 140
+Release  : 141
 URL      : https://files.pythonhosted.org/packages/20/53/d9282a66a5db45981499190b77790570617a604a38f3d103d0400974aeb5/grpcio-1.67.1.tar.gz
 Source0  : https://files.pythonhosted.org/packages/20/53/d9282a66a5db45981499190b77790570617a604a38f3d103d0400974aeb5/grpcio-1.67.1.tar.gz
 Summary  : HTTP/2-based RPC framework
