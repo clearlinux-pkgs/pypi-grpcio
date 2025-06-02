@@ -23,7 +23,6 @@ libabsl_statusor.so.2407.0.0
 libabsl_str_format_internal.so.2407.0.0
 libabsl_strings.so.2407.0.0
 libabsl_synchronization.so.2407.0.0
-libabsl_throw_delegate.so.2407.0.0
 libabsl_time.so.2407.0.0
 libabsl_time_zone.so.2407.0.0
 libabsl_vlog_config_internal.so.2407.0.0
