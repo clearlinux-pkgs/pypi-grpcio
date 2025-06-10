@@ -1,4 +1,4 @@
-1.72.1
+1.73.0
 c-ares-dev
 openssl-dev
 pkgconfig(protobuf)
